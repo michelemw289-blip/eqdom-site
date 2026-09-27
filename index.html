@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إكدوم Eqdom - منصة التمويل والقرود</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .eqdom-red {
+            background-color: #E30613;
+        }
+        .eqdom-red-text {
+            color: #E30613;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / شريط التنقل العلوي -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <div class="eqdom-red text-white font-bold text-xl px-3 py-1 rounded-md flex items-center justify-center">E</div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg leading-tight text-gray-900">إكدوم</span>
+                        <span class="text-[9px] tracking-widest text-gray-500 font-semibold">EQDOM</span>
+                    </div>
+                </div>
+                <!-- Slogan -->
+                <span class="hidden md:inline-block text-xs font-semibold eqdom-red-text bg-red-50 px-3 py-1 rounded-full border border-red-100">أنتم الأهم</span>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-6 space-x-reverse text-sm font-semibold text-gray-600">
+                <a href="#" class="hover:text-[#E30613] transition">الرئيسية</a>
+                <a href="#simulator" class="hover:text-[#E30613] transition">طلب القرض والمحاكاة</a>
+                <a href="#services" class="hover:text-[#E30613] transition">عروضنا</a>
+                <a href="#advantages" class="hover:text-[#E30613] transition">لماذا إكدوم</a>
+            </nav>
+
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="#simulator" class="eqdom-red text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition shadow-md shadow-red-600/10">فضاء الزبناء</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section / الواجهة الترحيبية -->
+    <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-[#E30613]/20 text-red-400 border border-red-500/30 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4">تمويل سريع وموثوق</span>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">حياة جديدة، قروض أسهل تلبي طموحاتك</h1>
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">اكتشف حلولنا التمويلية المرموقة المصممة خصيصاً لتناسب احتياجاتك، بإجراءات بسيطة وموافقة سريعة.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#simulator" class="eqdom-red text-white font-bold px-6 py-3.5 rounded-xl hover:opacity-90 transition shadow-lg shadow-red-600/30">قدم طلبك الآن</a>
+                    <a href="#services" class="bg-white/10 text-white border border-white/20 font-bold px-6 py-3.5 rounded-xl hover:bg-white/20 transition">اكتشف العروض</a>
+                </div>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-sm">
+                <h3 class="text-xl font-bold mb-4 text-white">مميزات حصرية لخدمتكم</h3>
+                <ul class="space-y-4 text-gray-300 text-sm">
+                    <li class="flex items-center space-x-3 space-x-reverse">
+                        <span class="w-6 h-6 rounded-full bg-red-500/20 text-[#E30613] flex items-center justify-center font-bold">✓</span>
+                        <span>دراسة سريعة لملفك ومتابعة شخصية مستمرة.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 space-x-reverse">
+                        <span class="w-6 h-6 rounded-full bg-red-500/20 text-[#E30613] flex items-center justify-center font-bold">✓</span>
+                        <span>أقساط شهرية مرنة تتناسب بدقة مع ميزانيتك.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 space-x-reverse">
+                        <span class="w-6 h-6 rounded-full bg-red-500/20 text-[#E30613] flex items-center justify-center font-bold">✓</span>
+                        <span>شفافية كاملة بدون أي رسوم مخفية.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Form & Simulator Section / قسم طلب القرض المرتبط بـ Formspree -->
+    <main id="simulator" class="max-w-4xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">طلب التمويل وإرسال المعلومات</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">قم بملء البيانات أدناه وسيتم إرسالها مباشرة لفريق إكدوم لمعالجة طلبك في أسرع وقت.</p>
+        </div>
+
+        <!-- Formspree Integration Form -->
+        <form action="https://formspree.io/f/mbglzeol" method="POST" class="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-gray-100 space-y-6">
+            
+            <!-- معلومات الشخصية -->
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">1. المعلومات الشخصية</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">الاسم الشخصي:</label>
+                        <input type="text" name="الاسم_الشخصي" required placeholder="مثال: محمد" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">الاسم العائلي:</label>
+                        <input type="text" name="الاسم_العائلي" required placeholder="مثال: الإدريسي" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">رقم الهاتف:</label>
+                        <input type="tel" name="رقم_الهاتف" required placeholder="06XXXXXXXX" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">البريد الإلكتروني:</label>
+                        <input type="email" name="البريد_الإلكتروني" required placeholder="example@gmail.com" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- تفاصيل القرض -->
+            <div class="pt-4">
+                <h3 class="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100">2. تفاصيل التمويل المطلوب</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">نوع التمويل:</label>
+                        <select name="نوع_التمويل" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                            <option>قرض استهلاكي متعدد الاستخدامات</option>
+                            <option>تمويل اقتناء سيارة جديدة / مستعملة</option>
+                            <option>قرض صغار المهن والحرفيين</option>
+                            <option>قرض تسديد الالتزامات (Rachat de crédits)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">الوضعية المهنية:</label>
+                        <select name="الوضعية_المهنية" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                            <option>أجير بالقطاع الخاص</option>
+                            <option>موظف بالقطاع العمومي (Fonctionnaire)</option>
+                            <option>متقاعد</option>
+                            <option>مهن حرة / تاجر / مستقل</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">المبلغ المرغوب فيه (درهم):</label>
+                        <input type="number" name="المبلغ_المطلوب" value="50000" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm font-bold">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">مدة السداد (بالأشهر):</label>
+                        <select name="مدة_السداد" class="w-full border border-gray-300 rounded-xl p-3.5 focus:outline-none focus:border-[#E30613] bg-gray-50 text-sm">
+                            <option>12 شهر (سنة واحدة)</option>
+                            <option>24 شهر (سنتان)</option>
+                            <option>36 شهر (3 سنوات)</option>
+                            <option>48 شهر (4 سنوات)</option>
+                            <option selected>60 شهر (5 سنوات)</option>
+                            <option>72 شهر (6 سنوات)</option>
+                            <option>84 شهر (7 سنوات)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر الإرسال -->
+            <div class="pt-4">
+                <button type="submit" class="w-full eqdom-red text-white font-bold py-4 rounded-2xl hover:opacity-90 transition shadow-xl shadow-red-600/20 text-lg">
+                    إرسال الطلب الآن
+                </button>
+                <p class="text-center text-xs text-gray-400 mt-3">بالنقر على إرسال، فإنك توافق على معالجة بياناتك الشخصية من طرف مصالح إكدوم.</p>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Services Section / قسم الخدمات -->
+    <section id="services" class="bg-gray-100 py-16 px-4 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold eqdom-red-text bg-white px-3 py-1 rounded-full border border-gray-200 inline-block mb-2">حلول متكاملة</span>
+                <h2 class="text-3xl font-bold text-gray-900">خدماتنا المخصصة لتلبية رغباتك</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 eqdom-red-text flex items-center justify-center font-bold text-xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">القرض الاستهلاكي</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">حقق مشاريعك الشخصية، سافر، أو جهز منزلك بكل راحة وبقسط شهري مدروس بعناية.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 eqdom-red-text flex items-center justify-center font-bold text-xl mb-4">🚗</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">تمويل السيارات</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">امتلك سيارة أحلامك الجديدة أو المستعملة بشروط تمويل ميسرة ومواكبة دقيقة لملفك.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 eqdom-red-text flex items-center justify-center font-bold text-xl mb-4">🔄</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">تجميع القروض</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">قم بدمج قروضك المتعددة في قسط شهري واحد موحد ومخفض لتخفيف العبء المالي الشهرى.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / أسفل الصفحة -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 text-sm border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-2 space-x-reverse mb-4">
+                    <div class="eqdom-red text-white font-bold text-lg px-2.5 py-0.5 rounded-md">E</div>
+                    <span class="text-white font-bold text-lg">إكدوم EQDOM</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mb-4">الشركة الرائدة في مجال القروض الشخصية والاستهلاكية بالمغرب. شعارنا الدائم: لأنكم الأهم.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">من نحن</a></li>
+                    <li><a href="#" class="hover:text-white transition">الوكالات القريبة منك</a></li>
+                    <li><a href="#" class="hover:text-white transition">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">خدمة الزبناء</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">مركز المساعدة</a></li>
+                    <li><a href="#" class="hover:text-white transition">تتبع الطلب</a></li>
+                    <li><a href="#" class="hover:text-white transition">الشكايات والمقترحات</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">ابق على اتصال</h4>
+                <p class="text-xs mb-3">تابعنا لمعرفة آخر العروض والامتيازات الحصرية.</p>
+                <div class="flex space-x-3 space-x-reverse">
+                    <span class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white font-bold">f</span>
+                    <span class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white font-bold">in</span>
+                    <span class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white font-bold">ig</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            جميع الحقوق محفوظة © 2026 إكدوم (EQDOM).
+        </div>
+    </footer>
+
+</body>
+</html>
